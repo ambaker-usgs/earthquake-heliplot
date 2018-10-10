@@ -1,6 +1,6 @@
 # Introduction
 
-HeliPlot.py is a Python application designed to generate heliplot images, thumbnails, and corresponding html files.  The format is that expected by the earthquake.usgs.gov 'Monitoring' web pages for the ANSS Backbone and UGSG GSN stations.
+HeliPlot.py is a Python application designed to generate heliplot images, thumbnails, and corresponding html files.  The format is that expected by the earthquake.usgs.gov 'Monitoring' web pages for the ANSS Backbone and USGS GSN stations.
 
 
 
