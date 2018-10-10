@@ -32,7 +32,7 @@ HeliPlot.py was developed using the Miniconda distribution of Python 3.6.  We re
   c. add the following line to the bottom of ~/.bashrc
     source activate heli
 
-2. edit the .bashrc file in the home directory of the account under which the heliplot application is installed to identify the Python library directory.  For example, if the application was installed in /home/heli/heliplot, you would add the following line:
+2. edit the ~/.bashrc to export the Python library directory.  For example, if the application was installed in /home/heli/heliplot, you would add the following line:
 export PYTHONPATH=/home/heli/heliplot/lib
 
 3. configure HeliPlot.py
