@@ -1,0 +1,20 @@
+name: heli
+channels:
+- conda-forge
+- defaults
+dependencies:
+- backports=1.0
+- backports.functools_lru_cache=1.4
+- ca-certificates=2017.11.5
+- certifi=2017.11.5
+- freetype=2.9.1
+- openssl=1.0.2n
+- python=3.6.4
+- python-dateutil=2.6.1
+- send2trash=1.4.2
+- obspy=1.1.0
+- matplotlib=2.2.3
+- psutil=5.4.7
+- glob2=0.6
+- pip:
+  - backports.functools-lru-cache==1.4
