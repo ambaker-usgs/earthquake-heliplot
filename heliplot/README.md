@@ -19,9 +19,7 @@ HeliPlot.py was developed using the Miniconda distribution of Python 3.6.  We re
 
 1. Install and configure Python (Miniconda or Anaconda are preferred)
 
-2. Install and configure PDL (if necessary)
-
-3. Install the application
+2. Install the application
    git clone https://github.com/usgs/earthquake-heliplot
 
 
