@@ -25,14 +25,9 @@ import sys
 ####################
 def validate_config_file(config):
     """
-    Purpose: Process config file to ensure all sections and key/value pairs.
+    Purpose: Process config file to ensure all sections and key/value pairs
              are present.  Also, initialize and load the data dictionaries
              for each section.
-
-    Notes:   The configuration file is processed before logging starts
-             (because the SETUP section contains logging parameters).
-             Therefore, errors have to be printed to stdout (not the log
-             file)
          
     Arguments: handle to config file
 
