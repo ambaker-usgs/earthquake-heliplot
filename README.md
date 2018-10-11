@@ -26,9 +26,12 @@ HeliPlot.py was developed using the Miniconda distribution of Python 3.6.  We re
 # Configuration
 
 1. create conda environment
+
   a. cd to the heliplot directory
+  
   b. run the following command to create a custom conda environment named TED
     conda env create -f environment.yml
+    
   c. add the following line to the bottom of ~/.bashrc
     source activate heli
 
