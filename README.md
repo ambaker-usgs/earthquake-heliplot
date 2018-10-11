@@ -39,7 +39,9 @@ HeliPlot.py was developed using the Miniconda distribution of Python 3.6.  We re
 export PYTHONPATH=/home/heli/heliplot/lib
 
 3. configure HeliPlot.py
+
        a. the configuration file is named HeliPlot.ini, which is located in the heliplot directory
+       
        b. the file is set up to generate heliplots for the ANSS Backbone and USGS GSN stations, alter as needed
 
 
