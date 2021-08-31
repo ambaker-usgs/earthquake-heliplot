@@ -10,15 +10,15 @@ from pathlib import Path
 from shutil import copyfile
 from dateutil.tz import tzlocal
 
-import kill
-import parallelcwbQuery
-import pullTraces
-import freqResponse
-import paralleldeconvFilter
-import magnifyData
-import parallelplotVelocity
-import createThumbnails
-import convertTime
+from lib import kill
+from lib import parallelcwbQuery
+from lib import pullTraces
+from lib import freqResponse
+from lib import paralleldeconvFilter
+from lib import magnifyData
+from lib import parallelplotVelocity
+from lib import createThumbnails
+from lib import convertTime
 import time
 import sys
 
@@ -67,23 +67,31 @@ def validate_config_file(config):
     # make sure all the directories exist and then tack on a trailing / to each
     if not os.path.isdir(setup_dict['data_dir']):
         print("ERROR: [SETUP] section 'data_dir' does not exist")
-        sys.exit(1)
+        # TK - debug - remove before push and uncomment sys.exit()
+        setup_dict['data_dir'] = setup_dict['data_dir'][1:]
+        # sys.exit(1)
     setup_dict['data_dir'] = setup_dict['data_dir'] + "/"
 
     if not os.path.isdir(setup_dict['plot_dir']):
         print("ERROR: [SETUP] section 'plot_dir' does not exist")
-        sys.exit(1)
+        # TK - debug - remove before push and uncomment sys.exit()
+        setup_dict['plot_dir'] = setup_dict['plot_dir'][1:]
+        # sys.exit(1)
     setup_dict['plot_dir'] = setup_dict['plot_dir'] + "/"
     
     if not os.path.isdir(setup_dict['resp_dir']):
         print("ERROR: [SETUP] section 'resp_dir' does not exist")
-        sys.exit(1)
+        # TK - debug - remove before push and uncomment sys.exit()
+        setup_dict['resp_dir'] = setup_dict['resp_dir'][1:]
+        # sys.exit(1)
     setup_dict['resp_dir'] = setup_dict['resp_dir'] + "/"
 
     # make sure the nodata file is there
     if not os.path.exists(setup_dict['nodata_file']):
         print("ERROR: [SETUP] section 'nodata_file' does not exist")
-        sys.exit(1)
+        # TK - debug - remove before push and uncomment sys.exit()
+        setup_dict['nodata_file'] = setup_dict['nodata_file'][1:]
+        # sys.exit(1)
 
     ############################
     # process [PLOT] section
@@ -169,6 +177,7 @@ if __name__ == '__main__':
 
     # Create file spec for the working directory and open the config file
     homedir = os.path.dirname(os.path.abspath(__file__))
+    print('Homedir', homedir)
     configfile = os.path.join(homedir, program_name + '.ini')
     if not os.path.isfile(configfile):
         log_msg = "Config file '{}' does not exist"
@@ -258,6 +267,9 @@ if __name__ == '__main__':
                  'duration':      cwbquery_dict['duration'],
                  'seedpath':      setup_dict['data_dir'],
                  'ipaddress':     cwbquery_dict['ipaddress']}
+    # TK - remove these next 2 lines before production
+    queryargs['cwbquery'] = '/Users/ambaker/Documents/old/git/heliStuff/GUI/CWBQuery.jar'
+    print('CWBQ.J', queryargs['cwbquery'])
     query.launchWorkers(**queryargs)
     run_times['Pull data'] = round(time.time() - t1, 2)
 

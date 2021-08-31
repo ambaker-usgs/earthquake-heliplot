@@ -23,8 +23,8 @@ import numpy as np
 import linecache
 
 from multiprocessing import Manager, Value
-from kill import Kill 
-from interrupt import KeyboardInterruptError, TimeoutExpiredError
+from lib.kill import Kill 
+from lib.interrupt import KeyboardInterruptError, TimeoutExpiredError
 
 def PrintException():
     exc_type, exc_obj, tb = sys.exc_info()

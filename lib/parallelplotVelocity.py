@@ -21,8 +21,8 @@ from multiprocessing import Manager, Value
 import os, sys, string, subprocess
 import time, signal, glob, re
 
-from kill import Kill 
-from interrupt import KeyboardInterruptError, TimeoutExpiredError
+from lib.kill import Kill 
+from lib.interrupt import KeyboardInterruptError, TimeoutExpiredError
 
 # Unpack self from parallel method args and call method plotVelocity()
 def unwrap_self_plotVelocity(args, **kwargs):

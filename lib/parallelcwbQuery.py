@@ -16,8 +16,8 @@ from multiprocessing import Manager, Value
 import os, sys, string, subprocess
 import time, signal, glob
 
-from kill import Kill 
-from interrupt import KeyboardInterruptError, TimeoutExpiredError
+from lib.kill import Kill 
+from lib.interrupt import KeyboardInterruptError, TimeoutExpiredError
 
 # Unpack self from parallel method args and call cwbQuery()
 def unwrap_self_cwbQuery(args, **kwargs):
@@ -39,7 +39,7 @@ class ParallelCwbQuery(object):
 					'"' + " -d " + '"'+str(self.duration)+'"' +
 					" -t dcc512 -o " + self.seedpath+"%N_%y_%j -h " +
 					'"'+self.ipaddress+'"')
-				#print(cmd)
+				# print(cmd)
 				# may want to implement a logger to track system
 				# pid hangs and program exceptions
 				#print ("java -jar " + self.cwbquery + " -s " + '"'+station+'"' +
