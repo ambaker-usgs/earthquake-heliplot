@@ -67,31 +67,23 @@ def validate_config_file(config):
     # make sure all the directories exist and then tack on a trailing / to each
     if not os.path.isdir(setup_dict['data_dir']):
         print("ERROR: [SETUP] section 'data_dir' does not exist")
-        # TK - debug - remove before push and uncomment sys.exit()
-        setup_dict['data_dir'] = setup_dict['data_dir'][1:]
-        # sys.exit(1)
+        sys.exit(1)
     setup_dict['data_dir'] = setup_dict['data_dir'] + "/"
 
     if not os.path.isdir(setup_dict['plot_dir']):
         print("ERROR: [SETUP] section 'plot_dir' does not exist")
-        # TK - debug - remove before push and uncomment sys.exit()
-        setup_dict['plot_dir'] = setup_dict['plot_dir'][1:]
-        # sys.exit(1)
+        sys.exit(1)
     setup_dict['plot_dir'] = setup_dict['plot_dir'] + "/"
     
     if not os.path.isdir(setup_dict['resp_dir']):
         print("ERROR: [SETUP] section 'resp_dir' does not exist")
-        # TK - debug - remove before push and uncomment sys.exit()
-        setup_dict['resp_dir'] = setup_dict['resp_dir'][1:]
-        # sys.exit(1)
+        sys.exit(1)
     setup_dict['resp_dir'] = setup_dict['resp_dir'] + "/"
 
     # make sure the nodata file is there
     if not os.path.exists(setup_dict['nodata_file']):
         print("ERROR: [SETUP] section 'nodata_file' does not exist")
-        # TK - debug - remove before push and uncomment sys.exit()
-        setup_dict['nodata_file'] = setup_dict['nodata_file'][1:]
-        # sys.exit(1)
+        sys.exit(1)
 
     ############################
     # process [PLOT] section
@@ -267,9 +259,6 @@ if __name__ == '__main__':
                  'duration':      cwbquery_dict['duration'],
                  'seedpath':      setup_dict['data_dir'],
                  'ipaddress':     cwbquery_dict['ipaddress']}
-    # TK - remove these next 2 lines before production
-    queryargs['cwbquery'] = '/Users/ambaker/Documents/old/git/heliStuff/GUI/CWBQuery.jar'
-    print('CWBQ.J', queryargs['cwbquery'])
     query.launchWorkers(**queryargs)
     run_times['Pull data'] = round(time.time() - t1, 2)
 
