@@ -1,0 +1,45 @@
+[
+  {
+    "name": "earthquake-heliplot",
+    "organization": "U.S. Geological Survey",
+    "description": "Station metadata management site and database",
+    "version": "v0.0.0",
+    "status": "Production",
+
+    "permissions": {
+      "usageType": "openSource",
+      "licenses": [
+        {
+          "name": "Public Domain, CC0-1.0",
+          "URL": "https://code.usgs.gov/asl/earthquake-heliplot/-/raw/master/LICENSE.md"
+        }
+      ]
+    },
+
+    "homepageURL": "https://code.usgs.gov/asl/earthquake-heliplot",
+    "downloadURL": "https://code.usgs.gov/asl/earthquake-heliplot/-/archive/master/earthquake-heliplot-master.zip",
+    "disclaimerURL": "https://code.usgs.gov/asl/earthquake-heliplot/-/raw/master/DISCLAIMER.md",
+    "repositoryURL": "https://code.usgs.gov/asl/earthquake-heliplot.git",
+    "vcs": "git",
+
+    "laborHours": 1000,
+
+    "tags": [
+      "seismology",
+      "metadata"
+    ],
+
+    "languages": [
+      "Python"
+    ],
+
+    "contact": {
+      "name": "Adam Baker",
+      "email": "ambaker@usgs.gov"
+    },
+
+    "date": {
+      "metadataLastUpdated": "2021-09-02"
+    }
+  }
+]
